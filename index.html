@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Resume Builder</title>
+  <link rel="stylesheet" href="mee.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</div>
+  <header>
+    <h1>🚀 Resume Builder Pro</h1>
+    <p>Create a polished, professional resume in minutes!</p>
+  </header>
+
+  <div class="container">
+    <div class="form-section">
+      <h2>Your Details</h2>
+
+      <label>Profile Photo</label>
+      <input type="file" id="photoInput" accept="image/*" />
+
+      <label>Full Name</label>
+      <input type="text" id="name" />
+
+      <label>Email</label>
+      <input type="email" id="email" />
+
+      <label>Phone</label>
+      <input type="tel" id="phone" />
+
+      <label>Summary</label>
+      <textarea id="summary" placeholder="Brief summary about you..."></textarea>
+
+      <label>Skills</label>
+      <input type="text" id="skillInput" placeholder="Type a skill and press Enter" />
+      <div id="skillsContainer"></div>
+
+      <label>Education</label>
+      <textarea id="education" placeholder="Degree, School, Year"></textarea>
+
+      <label>Experience</label>
+      <textarea id="experience" placeholder="Position, Company, Duration"></textarea>
+
+      <label>Select Template</label>
+      <select id="template">
+        <option value="template1">Modern</option>
+        <option value="template2">Elegant</option>
+      </select>
+
+      <button onclick="generateResume()">Preview Resume</button>
+      <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+
+    <div class="preview-section">
+      <h2>Preview</h2>
+      <div id="resumePreview">
+        <p>Fill in the form to see your resume preview.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="mee.js"></script>
+</body>
+</html>
